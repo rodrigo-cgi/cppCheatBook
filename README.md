@@ -13,3 +13,11 @@ g++ -Wall -Wextra -pedantic -std=c++14 -O2 -o hello hello.cpp
 -std = Cpp version
 -O2: Optimize even more. GCC performs nearly all supported optimizations that do not involve a space-speed tradeoff. As compared to -O, this option increases both compilation time and the performance of the generated code.
 -o: output file name, if not set, it will generate a.out
+
+## StyleGuide
+
+I'm following style guide of coreCPP for c++ in this repo. 
+https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions
+
+Worth checking google's version as well
+https://google.github.io/styleguide/cppguide.html
