@@ -18,6 +18,8 @@ g++ -Wall -Wextra -pedantic -std=c++14 -O2 -o hello hello.cpp
 
 I'm following style guide of coreCPP for c++ in this repo. 
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions
+Naming conventions:
+https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-naming
 
 Worth checking google's version as well
 https://google.github.io/styleguide/cppguide.html
