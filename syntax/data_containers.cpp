@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 int main(){
 
     // Data containers:
@@ -18,16 +20,21 @@ int main(){
     long double var_ld = 0.0; // 10 byte  - 4E-4932 to 1.1E+4932
     char var_c = 'c'; // It's an int that represents a char. -128 to 127
     wchar_t var_wc = 'ஹ'; // data type wide enough to store any kind of char in any existing language. 
-    void; 
-
 
     // __________________________________________________________________________________________________
     // Derived data containers
+    cout << endl;
 
-    void function_f() {}; //function
+    //function
     bool & ref_b = var_b; // reference
+    cout << "Referece: " << ref_b << endl;
     bool * ptr_b = &var_b; // pointer, which is initialized with the address for var_B
-
+    cout << "Pointer: " << ptr_b << endl;
+    // you can't interact with the var to which the pointers points, by just assigning a value to the pointer.
+    // you need to expand the pointer to the original var first by usin *<pointer>
+    cout << "Pointer expanded with *: " << *ptr_b << endl;
+    *ptr_b = false;
+    cout << "var_b after *ptr_b = false: " <<  var_b << endl;
 
     //___________________________________________________________________________________________________
     // arrays and list
@@ -49,6 +56,7 @@ int main(){
 
     //___________________________________________________________________________________________________
     // Some more useful abstract data types
+    cout << endl;
 
     // Enum is a list of integers which uses strings to represents them in the code for convenience
     // It only accepts in types: int, long int, char, unsigned char etc;
@@ -67,6 +75,12 @@ int main(){
         private:
             TypesOfFruits current_fruit_ = Apple;
     };
+
+    FrutiBasket basket;
+    cout << "What's the number of the FruitBasket's apple?:  " << basket.Apple << endl;
+    cout << "What's the number of the FruitBasket's banana?:  " << basket.Banana << endl;
+    cout << "What's the number of the FruitBasket's orange?:  " << basket.Orange << endl;
+
 
     return 0;
 }
