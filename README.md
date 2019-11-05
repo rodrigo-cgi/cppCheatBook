@@ -43,7 +43,7 @@ A few files will be created inside .vscode folder, on the root of your project.
 You can change configurations on launch.json
 If you need to compile multiple fles, add them on the definition of the tasks, at tasks.json.
 Example of tasks.json
-"sample"
+```
         {
             "tasks": [
                 {
@@ -63,9 +63,9 @@ Example of tasks.json
             ],
             "version": "2.0.0"
         }
-
+```
 example of  launch.json
-
+```
     "version": "0.2.0",
     "configurations": [
         {
@@ -90,5 +90,5 @@ example of  launch.json
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
-}
 
+```
