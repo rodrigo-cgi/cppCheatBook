@@ -23,3 +23,23 @@ https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-n
 
 Worth checking google's version as well
 https://google.github.io/styleguide/cppguide.html
+
+
+## Debugging in VS Code
+
+It's required to install gdb on your system. 
+For ubuntu or windown's unbuntu WSL. 
+sudo apt get install gdb
+
+Then, restart VS code. 
+Install the extension C.C++ from msfot
+
+Click Debug ->
+Start Debugging ->
+Choose the c++ configuration
+Choose g++ build and debug active file. 
+
+A few files will be created inside .vscode folder, on the root of your project. 
+You can change configurations on launch.json
+If you need to compile multiple fles, add them on the definition of the tasks, at tasks.json.
+
