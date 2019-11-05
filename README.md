@@ -42,4 +42,52 @@ Choose g++ build and debug active file.
 A few files will be created inside .vscode folder, on the root of your project. 
 You can change configurations on launch.json
 If you need to compile multiple fles, add them on the definition of the tasks, at tasks.json.
+Example of tasks.json
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cpp build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
+
+example of  launch.json
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cpp build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "cpp build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
 
