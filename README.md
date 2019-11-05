@@ -43,25 +43,26 @@ A few files will be created inside .vscode folder, on the root of your project.
 You can change configurations on launch.json
 If you need to compile multiple fles, add them on the definition of the tasks, at tasks.json.
 Example of tasks.json
-{
-    "tasks": [
+"sample"
         {
-            "type": "shell",
-            "label": "cpp build active file",
-            "command": "/usr/bin/g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+            "tasks": [
+                {
+                    "type": "shell",
+                    "label": "cpp build active file",
+                    "command": "/usr/bin/g++",
+                    "args": [
+                        "-g",
+                        "${file}",
+                        "-o",
+                        "${fileDirname}/${fileBasenameNoExtension}"
+                    ],
+                    "options": {
+                        "cwd": "/usr/bin"
+                    }
+                }
             ],
-            "options": {
-                "cwd": "/usr/bin"
-            }
+            "version": "2.0.0"
         }
-    ],
-    "version": "2.0.0"
-}
 
 example of  launch.json
 
