@@ -3,10 +3,16 @@
 #include  <iostream>
  
 using namespace sorting_classes;
-// namespace nae sorting_classes
 
-
-Char::Char(std::string name, std::string role, int index):
+sorting_classes::Character::Character(std::string name, std::string role, int index):
                 name_(name), role_(role), index_(index)
-{};
+{
 
+};
+
+
+bool sorting_classes::Character::operator <(const Character & character) const{
+
+    return this->GetIndex() < character.GetIndex(); 
+
+};

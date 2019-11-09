@@ -3,7 +3,7 @@
 
 namespace sorting_classes {
 
-class Char {
+class Character {
 
     private:
         std::string name_;
@@ -11,10 +11,11 @@ class Char {
         int index_;
     
     public:
-        Char(std::string name, std::string role, int index);
-        ~Char();
+        Character(std::string name, std::string role, int index);
         std::string GetName() const {return name_;};
         int GetIndex() const {return index_;};
+
+        bool operator< (const Character& character) const;
 };
 
 }
