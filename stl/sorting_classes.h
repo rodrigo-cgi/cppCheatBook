@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+namespace sorting_classes {
+
 class Char {
 
     private:
@@ -14,3 +16,5 @@ class Char {
         std::string GetName() const {return name_;};
         int GetIndex() const {return index_;};
 };
+
+}
