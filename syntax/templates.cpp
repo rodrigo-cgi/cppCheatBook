@@ -2,7 +2,7 @@
 #include "templates.h"
 #include "classes.h"
 // to run:
-// g++ -g -Wall -o compiled/templates.out templates.h templates.cpp; ./compiled/templates.out
+// g++ -g -Wall -o compiled/templates.out classes.h classes.cpp templates.h templates.cpp; ./compiled/templates.out
 
 
 int main (){
