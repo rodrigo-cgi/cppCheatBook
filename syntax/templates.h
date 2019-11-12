@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "classes.h"
 // Templates are NOT classes or functions. In a certain way, you can say they are instructions to genetate
 // functions on the compile time. The advantage is, you can create very generic and re-usable templates thata
 // are not strong typed.
@@ -26,4 +27,19 @@ class Accum
         Accum(T start): total_(start) {};
         T operator +=(T const& t){return total_ = total_ + t;};
         T GetTotal() const {return total_;};
+};
+
+// Templates specialization, 
+// Want to make Accum to work with Light classe. Doesn't work with child classes
+
+template <>
+class Accum<Light> {
+    private:
+        int total_; // we know light intensity is an int
+    public:
+        // replace all occurence of T on the public declarations as well: 
+        Accum(int start): total_(start) {};
+        int operator +=(Light const& t){return total_ = total_ + t.GetIntensity();}; // we now whats GetIntensity
+        int GetTotal() const {return total_;};
+
 };

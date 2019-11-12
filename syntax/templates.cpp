@@ -1,5 +1,6 @@
 #include <iostream>
 #include "templates.h"
+#include "classes.h"
 // to run:
 // g++ -g -Wall -o compiled/templates.out templates.h templates.cpp; ./compiled/templates.out
 
@@ -34,6 +35,22 @@ int main (){
     std::cout << "THe text built is: " << text.GetTotal() << std::endl;
 
 
+    // Using Classes
+    // In this sample, we need to decide what does it mean to accumulate a class.
+    // I'll use the sum of the Light intensities.
+
+    Light dome_01 ("dome", "_01", 20);
+    Light sun_01 ("sun", "_01", 30);
+    SpotLight spot_01 ("spot", "_01", 30, "lightgroup");
+
+    // creting an accum object that will have the sum of all lights
+    Accum<Light> sky(0);
+
+    sky += dome_01;
+    sky += sun_01;
+    sky += spot_01;
+
+    std::cout << "The new light, sky, has intensity of " << sky.GetTotal() <<std::endl;
 
     return 0;
 
