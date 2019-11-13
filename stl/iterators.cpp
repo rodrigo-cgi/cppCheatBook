@@ -62,4 +62,7 @@ int main() {
 
     cout << "" << endl;
     return 0;
+
+    //rend and rbegin , reverted algorithims
+    //TODO:
 }
