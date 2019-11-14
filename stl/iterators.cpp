@@ -9,10 +9,13 @@
 #include <deque>
 #include <array>
 
-
 using namespace std;
 
 int main() {
+
+    // Iterators are objects that store position and a reference to the value in a given collection
+    // to access the value of the iterator at a certain position, use *
+    // *iterator
     
     //_____________________________________________________________________________________________________________
     //Prelocating
@@ -61,8 +64,41 @@ int main() {
                                                                              // {2, 5, 10, 15, 20, 25}
 
     cout << "" << endl;
+
+    //_____________________________________________________________________________________________________________
+    //rend and rbegin , reverted algorithims
+    //rend is the same of begin -1, which doesn't exist but means the memory slot before the beginning
+    //rbegin means end -1. 
+    //rbegin + 1 is the same of end -2. You see, the progression is inverted. xx 
+
+    example02.clear();
+    vector<int> example05 = {1, 2, 3, 4};
+    copy(rbegin(example05), rend(example05), back_inserter(example02)); // >> {4, 3, 2, 1}
+
+    // can use rbegin and rend to find the last occurance of an elemnt
+    example04[9] = 5; // {2, 5, 10, 15, 20, 25, 5, 10, 15, 5, 25}
+
+    auto last_five = find(rbegin(example04), rend(example04), 5);
+    auto distance = last_five - rbegin(example04); // The distance is 1. since there is only one
+                                                   // element after the last 5.
+    last_five++; // iterator is at 25, which means, the element 10 of the list
+    
+
+    //_____________________________________________________________________________________________________________
+    // Arithmetic
+    // + , -, < , >, 
+
+    // legal: end(example01) - begin(example01)
+    //not legal: end(example01) - rbegin(example01)
+
+    //_____________________________________________________________________________________________________________
+    // const iterators
+    // cbegin and cend - > good express of intent and const correctness
+
+    array<int const, 5> constant_array01 = {3, 4, 3, 2, 1};
+    auto const_interator = cbegin(constant_array01);
+    const_interator++;
+
     return 0;
 
-    //rend and rbegin , reverted algorithims
-    //TODO:
 }

@@ -51,7 +51,7 @@ Example of tasks.json
                     "label": "cpp build active file",
                     "command": "/usr/bin/g++",
                     "args": [
-                        "-g",
+                        "-ggdb",  // stronger option for VS gdb debug
                         "${file}",
                         "-o",
                         "${fileDirname}/${fileBasenameNoExtension}"
