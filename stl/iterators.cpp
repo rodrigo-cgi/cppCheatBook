@@ -12,6 +12,15 @@
 using namespace std;
 
 int main() {
+    
+    // Iterators are great since you can use them with functions you already know, such as 
+    // find, for_each, copy etc.
+    // each iterator will allow different results and ocasions to use them
+    // Here in this module  , some iterators are described:
+    // - Iserters
+    // - Reverse
+    // - Const
+    
 
     // Iterators are objects that store position and a reference to the value in a given collection
     // to access the value of the iterator at a certain position, use *
