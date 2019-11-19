@@ -92,3 +92,9 @@ example of  launch.json
     ]
 
 ```
+
+## Visual Studio code nuget
+
+Enforces Profiles from c++ core guidelines
+
+https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager
